@@ -1,6 +1,6 @@
-import React, { View, Text } from "react-native";
+import React from "react-native";
 
-// import { Container, Title } from "./styles";
+import { Container, Title } from "./styles";
 
 interface Props {
   title: string;
@@ -8,8 +8,8 @@ interface Props {
 
 export function Groups({ title }: Props) {
   return (
-    <View>
-      <Text>{title}</Text>
-    </View>
+    <Container>
+      <Title>{title}</Title>
+    </Container>
   );
 }
