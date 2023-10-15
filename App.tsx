@@ -6,7 +6,7 @@ import theme from "@theme/index";
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Groups title="Hello" />
+      <Groups title="Hello World" />
     </ThemeProvider>
   );
 }

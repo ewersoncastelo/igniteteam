@@ -1,15 +1,16 @@
-import theme from "@theme/index";
 import styled from "styled-components/native";
 
-export const Container = styled.View`
-  flex: 1;
-  background-color: ${() => theme.COLORS.GRAY_600};
+import Constants from "expo-constants";
+import { useTheme } from "styled-components";
 
-  justify-content: center;
-  align-items: center;
+export const Container = styled.SafeAreaView`
+  flex: 1;
+  background-color: ${() => useTheme().colors.GRAY_600};
+
+  padding-top: ${Constants.statusBarHeight + "px"};
 `;
 
 export const Title = styled.Text`
-  color: ${() => theme.COLORS.GRAY_100};
+  color: ${() => useTheme().colors.GRAY_100};
   font-size: 32px;
 `;
