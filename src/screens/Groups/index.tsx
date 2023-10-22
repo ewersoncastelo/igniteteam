@@ -1,15 +1,12 @@
 import React from "react-native";
 
-import { Container, Title } from "./styles";
+import { Container } from "./styles";
+import { Header } from "@components/Header";
 
-interface Props {
-  title: string;
-}
-
-export function Groups({ title }: Props) {
+export function Groups() {
   return (
     <Container>
-      <Title>{title}</Title>
+      <Header />
     </Container>
   );
 }
