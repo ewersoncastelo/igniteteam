@@ -1,5 +1,5 @@
 import { TouchableOpacity } from "react-native";
-import styled from "styled-components/native";
+import styled, { css } from "styled-components/native";
 
 export type ButtonTypeStyleProps = "ADDED" | "REMOVED";
 
@@ -14,17 +14,22 @@ export const Container = styled(TouchableOpacity)<Props>`
   max-height: 56px;
 
   background-color: ${({ theme, type }) =>
-    type === "ADDED" ? theme.colors.GREEN_700 : theme.colors.RED_DARK};
+    type === "ADDED"
+      ? theme.colors.GREEN_700
+      : theme.colors.RED_DARK};
 
   border-radius: 6px;
 
   justify-content: center;
   align-items: center;
+
+  margin-top: 20px;
 `;
 
 export const Title = styled.Text`
-  font-size: ${({ theme }) => theme.font_size.MEDIUM}px;
-  font-family: ${({ theme }) => theme.font_family.BOLD};
-
-  color: ${({ theme }) => theme.colors.WHITE};
+  ${({ theme }) => css`
+    font-size: ${theme.font_size.MEDIUM}px;
+    font-family: ${theme.font_family.BOLD};
+    color: ${theme.colors.WHITE};
+  `}
 `;
